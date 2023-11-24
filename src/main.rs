@@ -12,7 +12,7 @@ fn main() {
 
     let img = image::open(&args[1]).unwrap();
 
-    // The dimensions method returns the images width and height.
-    println!("dimensions {:?}", img.dimensions());
 
+        // The dimensions method returns the images width and height.
+        println!("file:{} dimensions:{:?}", imgfile, img.dimensions());
 }
