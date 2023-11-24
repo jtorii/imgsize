@@ -10,9 +10,10 @@ fn main() {
         return;
     }
 
-    let img = image::open(&args[1]).unwrap();
-
+    for imgfile in &args[1..] {
+        let img = image::open(imgfile).unwrap();
 
         // The dimensions method returns the images width and height.
         println!("file:{} dimensions:{:?}", imgfile, img.dimensions());
+    }
 }
